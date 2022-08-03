@@ -1,9 +1,9 @@
 git.init 初始化仓库
 新建->未跟踪
 修改已有->未暂存
-git add -> 已暂存
+git add .-> 已暂存
 git commit -> 修改进入到仓库,变成了一次提交记录
-
+git commit -m "xxx"  
 
 git status 查看文件状态
 git log 查看commit的历史数据
@@ -19,3 +19,8 @@ git branch 查看分支
 git branch xxx 新建分支
 
 多个分支时,只能修改当前分支
+
+git merge xxx 将xxx分支合并到当前分支
+
+git branch -d xxx 删除分支,需要各种检查
+git branch -D xxx 强制删除分支,不做检查
