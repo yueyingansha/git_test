@@ -1,1 +1,9 @@
 git.init 初始化仓库
+新建->未跟踪
+修改已有->未暂存
+git add -> 已暂存
+git commit -> 修改进入到仓库,变成了一次提交记录
+
+
+git status 查看文件状态
+git log 查看commit的历史数据
