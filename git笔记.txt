@@ -7,3 +7,9 @@ git commit -> 修改进入到仓库,变成了一次提交记录
 
 git status 查看文件状态
 git log 查看commit的历史数据
+
+git reset --hard xxx  版本切换
+
+git reflog 可以查看已经删除的记录
+
+.gitignore 文件里,添加要排除的文件名(支持正则匹配)
