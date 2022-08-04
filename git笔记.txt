@@ -66,5 +66,12 @@ git remote origin xxxx  origin是仓库别名(一般都是一个远程仓库,并
 git remote 查看远程仓库列表
 
 git push origin master[:master]   origin:仓库名  master:分支名[:master]是远程仓库的分支名.同名可省略  推送到远程仓库
-可选参数:-f 强制覆盖 --set--upstream:推送到远端的同时并且建立起和远端分支的联系
+可选参数:-f 强制覆盖 --set-upstream:推送到远端的同时并且建立起和远端分支的联系
+如果当前分支已经和远端关联,则 git push 可以直接推送到远程仓库
 
+git branch -vv 查看本地分支和远程分支的关联
+
+从远程仓库克隆
+git clone <仓库路径> [本地目录]
+
+抓取
