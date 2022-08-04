@@ -5,6 +5,10 @@ git add .-> 已暂存
 git commit -> 修改进入到仓库,变成了一次提交记录
 git commit -m "xxx"  
 
+alias 指令别名
+git bash:etc/profile.d/aliases.sh 可以设置永久别名
+$ alias git-log='git log --pretty=oneline --all --graph --abbrev-commit'
+
 git status 查看文件状态
 git log 查看commit的历史数据
 
@@ -21,6 +25,46 @@ git branch xxx 新建分支
 多个分支时,只能修改当前分支
 
 git merge xxx 将xxx分支合并到当前分支
+分支冲突时,手动解决
 
 git branch -d xxx 删除分支,需要各种检查
-git branch -D xxx 强制删除分支,不做检查
+git branch -D xxx 强制删除分支,不做检查 (分支未合并时使用到)
+
+master 生产分支/主分支
+
+develop开发分支
+
+feature开发新功能的分支
+
+开发新功能时,先在dev分支上新建一个feature分支,开发结束后再合并到dev分支.合并后,feature分支可以删除
+
+需要上线部署时,dev分支合并到master分支(dev分支一般不删)
+
+master分支提交的稳定版本,备注release
+
+修bug:master分支新建fix分支,修改测试后合并到master上(也合并到dev上)
+
+合并的快进模式
+
+
+
+远程仓库github/gitee/gitlab
+
+配置SSH公钥
+
+ssh-keygen -t rsa   rsa是一个生成算法
+
+cat ~/.ssh/id_rsa.pub 打印秘钥
+
+复制秘钥,添加到远程仓库的ssh秘钥里
+ssh -T git@github.com 测试ssh连接
+
+nslookup xxx 8.8.8.8 nslookup是域名解析工具，8.8.8.8是Google的DNS服务器地址。直接使用
+
+git remote origin xxxx  origin是仓库别名(一般都是一个远程仓库,并且起名origin) xxxx:远程仓库链接
+
+git remote 查看远程仓库列表
+
+git push origin master[:master]   origin:仓库名  master:分支名[:master]是远程仓库的分支名.同名可省略  推送到远程仓库
+可选参数:-f 强制覆盖 --set--upstream:推送到远端的同时并且建立起和远端分支的联系
+
