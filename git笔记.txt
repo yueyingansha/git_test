@@ -24,6 +24,8 @@ git branch xxx 新建分支
 
 多个分支时,只能修改当前分支
 
+git checkout 切换分支 -b参数:创建并切换
+
 git merge xxx 将xxx分支合并到当前分支
 分支冲突时,手动解决
 
